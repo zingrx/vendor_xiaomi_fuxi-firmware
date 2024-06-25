@@ -15,7 +15,7 @@ Manifest:
     <project name="vendor_xiaomi_fuxi-firmware" path="vendor/xiaomi/fuxi-firmware" remote="yourremote" />
 </manifest>
 ```
-Device tree dependencies file:
+Device tree dependencies file (optional)
 ```
 [
   {
@@ -31,13 +31,14 @@ Manual cloning:
 ```
 git clone https://github.com/zingrx/vendor_xiaomi_fuxi-firmware.git vendor/xiaomi/fuxi-firmware
 ```
-    These are example entries, you need to replace the relevant stuff with your own case.
+These are example entries, you need to replace the relevant stuff with your own case.
 
 After that, ensure your tree's `BoardConfig.mk` inherits this tree's BoardConfigVendor:
 ```
+# Firmware
 -include vendor/xiaomi/fuxi-firmware/BoardConfigVendor.mk
 ```
-    These kinds of includes are typically placed along with other inherits at the beginning of BoardConfig or at the end of BoardConfig, along with other includes if any.
 
-# Additional information for geeks
+
+## Additional information for geeks
 Extracted from HyperOS OS1.0.5.0.UMCMIXM FUXIGlobal
